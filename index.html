@@ -1,104 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Bootstrap</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link rel="stylesheet" href="styles.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
+      border-color:black;
+      background-color: rgb(24, 24, 24);
     }
     
     /* Add a gray background color and some padding to the footer */
     footer {
-      background-color: #f2f2f2;
+      background-color: rgb(24, 24, 24);
       padding: 25px;
     }
   </style>
 </head>
-<body>
+<body style="background-color:black">
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">Portfolio</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+  <nav class="navbar navbar-default navbar-static-top" style="background-color:black">
+    <div class="container" style="background-color:black" >
+      <div class="navbar-header" style="background-color:black">
+        <a class="navbar-brand" href="#" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size:18px; color:white;  font-family:'Montserrat';font-weight:bold">neha kuchipudi</a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <sapn class="icon-bar"></sapn>
+        </button>
+      </div>
+      <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
+        <li class="active"><a href="#" style="background-color:black; color:orange; font-family:'Montserrat'; font-weight:bold" >HOME</a></li>
+        <li><a href="play.html" style="color:white; font-family:'Montserrat';">PLAY</a></li>
+        <li><a href="#" style="color:white; font-family:'Montserrat';">RESUME</a></li>
+        <li><a href="contact.html" style="color:white; font-family:'Montserrat';">CONTACT</a></li>
       </ul>
     </div>
-  </div>
-</nav>
+  </nav>
 
 <div class="jumbotron">
   <div class="container text-center">
-    <h1>My Portfolio</h1>      
-    <p>Some text that represents "Me"...</p>
+    <h1 style="font-size: 90px; font-weight:bold;">hi, i'm neha</h1>      
+    <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:700px;
+    font-size:22px;
+    color:white;">ux designer <span style="color: orange;" > @ WPI IDeaS</span></p>
+    <div class="intro-buttons"></div>
+    <button class="resume-button">
+      resume   →
+    </button>
+    <button class="about-button">
+      contact   →
+    </button>
+  </div>
   </div>
 </div>
-  
-<div class="container-fluid bg-3 text-center">    
-  <h3>Some of my Work</h3><br>
-  <div class="row">
-    <div class="col-sm-3">
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+
+<div class="container text-left" style="background-color:black; padding-bottom:10px;"> 
+  <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:22px;
+  color:white;">recent work  ↓</p>
+</div>
+
+<div class="container text-center" style="background-color:black;">    
+  <div class="row" style="background-color:black; justify-content:space-around">
+    <div class="col-sm-6 justify-content-center" style="justify-content:center">
+      <img src="oracle.png" class="img-responsive" style="width:100%; border-radius:15px; margin-bottom:20px;" alt="Image" onmouseover="changeText()" onmouseout="changeBack()">
+      <script>
+        function changeText(){
+          var tag = document.getElementById('oracle-tag');
+          tag.style.visibility = 'visible';
+        }
+        function changeBack(){
+          var tag = document.getElementById('oracle-tag');
+          tag.style.visibility = 'hidden';
+        }
+      </script>
+      <div id="oracle-tag" class="centered">Oracle Internship</div>
     </div>
-    <div class="col-sm-3"> 
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    <div class="col-sm-6 justify-content-center"> 
+      <img src="wpi.png" class="img-responsive" style="width:100%; border-radius:15px; margin-bottom:20px;" alt="Image" onmouseover="changeText2()" onmouseout="changeBack2()">
+      <script>
+        function changeText2(){
+          var tag = document.getElementById('wpi-tag');
+          tag.style.visibility = 'visible';
+        }
+        function changeBack2(){
+          var tag = document.getElementById('wpi-tag');
+          tag.style.visibility = 'hidden';
+        }
+      </script>
+      <div id="wpi-tag" class="centered">WPI Dining Hall Delivery</div>
     </div>
-    <div class="col-sm-3"> 
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+  </div>
+</div>
+
+
+
+<div class="container text-center" style="background-color:black; padding-bottom:50px;">    
+  <div class="row" style="background-color:black; justify-content:space-around">
+    <div class="col-sm-6 justify-content-center" style="justify-content:center">
+      <img src="adopt.png" class="img-responsive" style="width:100%; border-radius:15px; margin-bottom:20px;" alt="Image" onmouseover="changeText3()" onmouseout="changeBack3()">
+      <script>
+        function changeText3(){
+          var tag = document.getElementById('adopt-tag');
+          tag.style.visibility = 'visible';
+        }
+        function changeBack3(){
+          var tag = document.getElementById('adopt-tag');
+          tag.style.visibility = 'hidden';
+        }
+      </script>
+      <div id="adopt-tag" class="centered">Adopt Google Doodle</div>
     </div>
-    <div class="col-sm-3">
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    <div class="col-sm-6 justify-content-center"> 
+      <img src="brigham2.png" class="img-responsive" style="width:100%; border-radius:15px; margin-bottom:20px;" alt="Image" onmouseover="changeText4()" onmouseout="changeBack4()">
+      <script>
+        function changeText4(){
+          var tag = document.getElementById('brigham-tag');
+          tag.style.visibility = 'visible';
+        }
+        function changeBack4(){
+          var tag = document.getElementById('brigham-tag');
+          tag.style.visibility = 'hidden';
+        }
+      </script>
+      <div id="brigham-tag" class="centered">Brigham & Women's Hospital</div>
     </div>
   </div>
 </div><br>
 
-<div class="container-fluid bg-3 text-center">    
-  <div class="row">
-    <div class="col-sm-3">
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3"> 
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3"> 
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-  </div>
-</div><br><br>
 
 <footer class="container-fluid text-center">
-  <p>Footer Text</p>
+  <p style="font-family:'Montserrat';
+  font-size:16px;
+  color:white;">made with <span style="color: rgb(235, 60, 83)">♥</span> by neha</p>
 </footer>
 
 </body>
